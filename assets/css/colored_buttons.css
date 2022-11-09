@@ -1,0 +1,46 @@
+.colored {
+    background: #311E44;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.colored:hover {
+    background: #251237;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.colored:active {
+    background: #220A34;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+#plot {
+    background-image: url('../svg/plot.svg');
+}
+
+#div {
+    background-image: url('../svg/div.svg');
+}
+
+#mul {
+    background-image: url('../svg/mul.svg');
+}
+
+#sub {
+    background-image: url('../svg/sub.svg');
+}
+
+#add {
+    background-image: url('../svg/add.svg');
+}
+
+#res {
+    background-image: url('../svg/res.svg');
+    border-radius: 0 0 8px 0;
+}
+

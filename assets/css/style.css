@@ -1,0 +1,108 @@
+* {
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    animation-timing-function: unset;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background-position: 0;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-outline-radius: 0;
+}
+
+#header, #body, #body_graph {
+    border-left: 1px solid rgba(66,66,66,0.6);
+    border-right: 1px solid rgba(66,66,66,0.6);
+    outline: 0;
+}
+
+#header, #body, #body_graph, #display text {
+    background-color: #161616;
+}
+
+#header, button {
+    color: transparent;
+    font-size: 0;
+}
+
+#body {
+    border-radius: 0 0 10px 10px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+}
+
+#body, #body_graph {
+    border-bottom: 1px solid rgba(66,66,66,0.4);
+}
+
+#body_graph {
+    padding: 0 1px 1px 1px;
+}
+
+#header {
+    border-radius: 10px 10px 0 0;
+    min-height: 0px;
+    padding: 0 7px 0 7px;
+    border-top: 1px solid rgba(66,66,66,0.4);
+}
+
+#header entry,
+#header spinbutton,
+#header button,
+#header separator {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#display {
+    font-size: 24px;
+    font-family: monospace;
+    padding-right: 3px;
+}
+
+#display text {
+    color: #707070;
+}
+
+@import 'normal_buttons.css';
+@import 'numpad_buttons.css';
+@import 'colored_buttons.css';
+
+button {
+    min-width: 0px;
+    margin: 1px 1px 0 0;
+    border: 0;
+}
+
+#specbut {
+    padding: 7px 0;
+}
+
+#specbut > button {
+    min-height: 0px;
+    border-radius: 50%;
+    padding: 6.75px;
+}
+
+#close:hover, #maximize:hover, #minimize:hover {
+    box-shadow: inset 0 0 1px 0 gold;
+}
+
+#specbut:backdrop > button {
+    background-color: #212121;
+}
+
+#close {
+    background-color: #EA6A5F;
+}
+
+#maximize {
+    background-color: #66C454;
+}
+
+#minimize {
+    background-color: #F3BD50;
+}

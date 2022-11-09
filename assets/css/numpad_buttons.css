@@ -1,0 +1,64 @@
+.numpad {
+    background: #616161;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.numpad:hover {
+    background: #717171;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.numpad:active {
+    background: #AAAAAA;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+#num9 {
+    background-image: url('../svg/num9.svg');
+}
+
+#num8 {
+    background-image: url('../svg/num8.svg');
+}
+
+#num7 {
+    background-image: url('../svg/num7.svg');
+}
+
+#num6 {
+    background-image: url('../svg/num6.svg');
+}
+
+#num5 {
+    background-image: url('../svg/num5.svg');
+}
+
+#num4 {
+    background-image: url('../svg/num4.svg');
+}
+
+#num3 {
+    background-image: url('../svg/num3.svg');
+}
+
+#num2 {
+    background-image: url('../svg/num2.svg');
+}
+
+#num1 {
+    background-image: url('../svg/num1.svg');
+}
+
+#num0 {
+    background-image: url('../svg/num0.svg');
+}
+
+#dot {
+    background-image: url('../svg/dot.svg');
+}

@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.0"/>
+  <object class="GtkTextBuffer" id="buf">
+    <property name="text">0</property>
+  </object>
+  <object class="GtkApplicationWindow" id="main">
+    <property name="app_paintable">True</property>
+    <property name="can_focus">True</property>
+    <property name="title">SmartCalc v1.0</property>
+    <property name="resizable">False</property>
+    <property name="gravity">static</property>
+    <child type="titlebar">
+      <object class="GtkBox" id="header">
+        <property name="name">header</property>
+        <property name="height_request">29</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkGrid" id="specbut">
+            <property name="name">specbut</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="column_spacing">7</property>
+            <child>
+              <object class="GtkButton" id="close">
+                <property name="name">close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <signal name="clicked" handler="close_window" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="minimize">
+                <property name="name">minimize</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <signal name="clicked" handler="minimize_window" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="name">body</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkTextView" id="display">
+            <property name="name">display</property>
+            <property name="height_request">55</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="wrap_mode">char</property>
+            <property name="justification">right</property>
+            <property name="buffer">buf</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid">
+            <property name="name">buttons</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="plot">
+                <property name="name">plot</property>
+                <property name="width_request">117</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="g" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+                <property name="width">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="varx">
+                <property name="label">x</property>
+                <property name="name">varx</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="x" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="ac">
+                <property name="name">ac</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="Escape" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="unar">
+                <property name="name">unar</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="underscore" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="mod">
+                <property name="label">%</property>
+                <property name="name">mod</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="percent" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">5</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="div">
+                <property name="label">/</property>
+                <property name="name">div</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="slash" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">6</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="l_brckt">
+                <property name="label">(</property>
+                <property name="name">l_brckt</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="parenleft" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="r_brckt">
+                <property name="label">)</property>
+                <property name="name">r_brckt</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="parenright" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pow">
+                <property name="label">^</property>
+                <property name="name">pow</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="asciicircum" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num7">
+                <property name="label">7</property>
+                <property name="name">num7</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="7" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num8">
+                <property name="label">8</property>
+                <property name="name">num8</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="8" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num9">
+                <property name="label">9</property>
+                <property name="name">num9</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="9" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">5</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="mul">
+                <property name="label">*</property>
+                <property name="name">mul</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="asterisk" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">6</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="log">
+                <property name="label">log(</property>
+                <property name="name">log</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="e" signal="clicked" modifiers="GDK_SHIFT_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="ln">
+                <property name="label">ln(</property>
+                <property name="name">ln</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="e" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="sqrt">
+                <property name="label">sqrt(</property>
+                <property name="name">sqrt</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="v" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num4">
+                <property name="label">4</property>
+                <property name="name">num4</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="4" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num5">
+                <property name="label">5</property>
+                <property name="name">num5</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="5" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num6">
+                <property name="label">6</property>
+                <property name="name">num6</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="6" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">5</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="sub">
+                <property name="label">-</property>
+                <property name="name">sub</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="minus" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">6</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="cos">
+                <property name="label">cos(</property>
+                <property name="name">cos</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="c" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="sin">
+                <property name="label">sin(</property>
+                <property name="name">sin</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="s" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="tan">
+                <property name="label">tan(</property>
+                <property name="name">tan</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="t" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num1">
+                <property name="label">1</property>
+                <property name="name">num1</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="1" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num2">
+                <property name="label">2</property>
+                <property name="name">num2</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="2" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num3">
+                <property name="label">3</property>
+                <property name="name">num3</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="3" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">5</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="add">
+                <property name="label">+</property>
+                <property name="name">add</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="plus" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">6</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="acos">
+                <property name="label">acos(</property>
+                <property name="name">acos</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="C" signal="clicked" modifiers="GDK_SHIFT_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="asin">
+                <property name="label">asin(</property>
+                <property name="name">asin</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="S" signal="clicked" modifiers="GDK_SHIFT_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="atan">
+                <property name="label">atan(</property>
+                <property name="name">atan</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="T" signal="clicked" modifiers="GDK_SHIFT_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="num0">
+                <property name="label">0</property>
+                <property name="name">num0</property>
+                <property name="width_request">117</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="0" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">4</property>
+                <property name="width">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="dot">
+                <property name="label">.</property>
+                <property name="name">dot</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="period" signal="clicked"/>
+                <style>
+                  <class name="numpad"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">5</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="res">
+                <property name="name">res</property>
+                <property name="width_request">65</property>
+                <property name="height_request">46</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="has_focus">True</property>
+                <property name="receives_default">False</property>
+                <accelerator key="equal" signal="clicked"/>
+                <style>
+                  <class name="colored"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">6</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="backspace">
+                <property name="name">backspace</property>
+                <property name="width_request">0</property>
+                <property name="height_request">0</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">False</property>
+                <accelerator key="BackSpace" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

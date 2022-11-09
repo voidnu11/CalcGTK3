@@ -1,0 +1,86 @@
+button {
+    background: #212121;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% 75%;
+}
+
+button:hover {
+    background: #313131;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% 75%;
+}
+
+button:active {
+    background: #777777;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% 75%;
+}
+
+#varx {
+
+    background-image: url('../svg/x.svg');
+}
+
+#ac {
+    background-image: url('../svg/ac.svg');
+}
+
+#unar {
+    background-image: url('../svg/unar.svg');
+}
+
+#mod {
+    background-image: url('../svg/mod.svg');
+}
+
+#l_brckt {
+    background-image: url('../svg/l_brckt.svg');
+}
+
+#r_brckt {
+    background-image: url('../svg/r_brckt.svg');
+}
+
+#pow {
+    background-image: url('../svg/pow.svg');
+}
+
+#log {
+    background-image: url('../svg/log.svg');
+}
+
+#ln {
+    background-image: url('../svg/ln.svg');
+}
+
+#sqrt {
+    background-image: url('../svg/sqrt.svg');
+}
+
+#cos {
+    background-image: url('../svg/cos.svg');
+}
+
+#sin {
+    background-image: url('../svg/sin.svg');
+}
+
+#tan {
+    background-image: url('../svg/tan.svg');
+}
+
+#acos {
+    background-image: url('../svg/acos.svg');
+    border-radius: 0 0 0 8px;
+}
+
+#asin {
+    background-image: url('../svg/asin.svg');
+}
+
+#atan {
+    background-image: url('../svg/atan.svg');
+}
